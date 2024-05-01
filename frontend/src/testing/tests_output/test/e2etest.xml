@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="test.e2etest"
+    errors="1" failures="0" hostname="" id="" package="e2etest" skipped="1"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+      
+┌────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                                    │
+│   ChromeDriver cannot be found in the current project.                                             │
+│                                                                                                    │
+│    You can either install chromedriver from NPM with:                                              │
+│                                                                                                    │
+│       npm install chromedriver --save-dev                                                          │
+│                                                                                                    │
+│    or download it from https://sites.google.com/chromium.org/driver/downloads,                     │
+│   extract the archive and set &#34;webdriver.server_path&#34; config option to point to the binary file.   │
+│                                                                                                    │
+│                                                                                                    │
+│                                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+    </system-err>
+  
+
+    
+    <error message="ChromeDriver cannot be found in the current project."><![CDATA[
+      Error: ChromeDriver cannot be found in the current project.
+    at ChromeServiceBuilder.getStartupErrorMessage (/Users/harshi/Desktop/PB-Final/src/testing/node_modules/nightwatch/lib/transport/selenium-webdriver/service-builders/base-service.js:197:26)
+    at new BaseService (/Users/harshi/Desktop/PB-Final/src/testing/node_modules/nightwatch/lib/transport/selenium-webdriver/service-builders/base-service.js:81:18)
+    at new ChromeServiceBuilder (/Users/harshi/Desktop/PB-Final/src/testing/node_modules/nightwatch/lib/transport/selenium-webdriver/service-builders/chrome.js:4:1)
+    at ChromeDriver.createDriverService (/Users/harshi/Desktop/PB-Final/src/testing/node_modules/nightwatch/lib/transport/selenium-webdriver/index.js:199:35)
+    at ChromeDriver.createSession (/Users/harshi/Desktop/PB-Final/src/testing/node_modules/nightwatch/lib/transport/selenium-webdriver/index.js:283:18)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="UDE Login page" classname="test.e2etest">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

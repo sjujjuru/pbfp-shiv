@@ -1,0 +1,8 @@
+// // Variable overrides first
+// $primary: #900;
+// $enable-shadows: true;
+// $prefix: "mo-";
+
+// Then import Bootstrap
+/* The following line can be included in a src/App.scss */
+@import '~bootstrap/scss/bootstrap';
