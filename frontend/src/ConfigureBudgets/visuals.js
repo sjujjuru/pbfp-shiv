@@ -352,8 +352,8 @@ const createBubbleChart = (chartRef, labels, budgetData, expenseData) => {
               label: 'Budget',
               type: 'bar',
               data: budget,
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              borderColor: 'rgba(75, 192, 192, 1)',
+              backgroundColor: 'rgba(76, 194, 194, 0.2)',
+              borderColor: 'rgba(76, 194, 194, 1)',
               borderWidth: 1,
             },
             {
@@ -384,15 +384,15 @@ const createBubbleChart = (chartRef, labels, budgetData, expenseData) => {
   const lineChartRef = useRef(null);
   const bubbleChartRef=useRef(null);
 
-  useEffect(() => createPolarareaChart(chartRef, dataSource.datasets[0].budget, dataSource.labels1), [dataSource]);
-  useEffect(() => createPolarareaChart(expenseRef, dataSource.datasets[0].expense, dataSource.labels2), [dataSource]);
+  // useEffect(() => createPolarareaChart(chartRef, dataSource.datasets[0].budget, dataSource.labels1), [dataSource]);
+  // useEffect(() => createPolarareaChart(expenseRef, dataSource.datasets[0].expense, dataSource.labels2), [dataSource]);
   useEffect(() => createGroupedBarChart(chart1Ref, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
   useEffect(() => createRadarChart(chart2Ref, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
   useEffect(() => createDoughnutChart(chart3Ref, dataSource.datasets[0].budget, dataSource.labels1), [dataSource]);
   useEffect(() => createDoughnutChart(chart4Ref, dataSource.datasets[0].expense, dataSource.labels1), [dataSource]);
   useEffect(() => createComboChart(chart5Ref, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
   useEffect(() => createLineChart(lineChartRef, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
-  useEffect(() => createBubbleChart(bubbleChartRef, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
+  // useEffect(() => createBubbleChart(bubbleChartRef, dataSource.labels1, dataSource.datasets[0].budget, dataSource.datasets[0].expense), [dataSource]);
 
 
   return (
@@ -472,35 +472,6 @@ const createBubbleChart = (chartRef, labels, budgetData, expenseData) => {
                 </div>
               </article>
             </section>
-            <section className="row row-cols-1 row-cols-md-2 g-4">
-              <article className="col">
-                <div className="card">
-                  <h1 className="card-header">Polar Area Chart - Budget</h1>
-                  <div className="card-body">
-                    <canvas ref={chartRef} />
-                  </div>
-                </div>
-              </article>
-              <article className="col">
-                <div className="card">
-                  <h1 className="card-header">Polar Area Chart - Expenses</h1>
-                  <div className="card-body">
-                    <canvas ref={expenseRef} />
-                  </div>
-                </div>
-              </article>
-            </section>
-            <section className="row row-cols-1 mt-3">
-              <article className="col">
-                <div className="card">
-                  <h1 className="card-header">Bubble Chart</h1>
-                  <div className="card-body">
-                    <canvas ref={bubbleChartRef} />
-                  </div>
-                </div>
-              </article>
-            </section>
-
           </section>
           
         ) : (

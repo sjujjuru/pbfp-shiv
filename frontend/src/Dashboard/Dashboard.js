@@ -18,7 +18,7 @@ function Dashboard() {
 
   return (
     <div className="container mt-5 text-center">
-      <h2>Welcome to the Dashboard!</h2>
+      <h2>Dashboard welcomes you</h2>
 
       <div className="mt-3">
         <p>This is your dashboard where you can manage your personal budget.</p>
@@ -27,11 +27,13 @@ function Dashboard() {
 
       <div className="mt-3">
         <Link to="/configure-budgets">
-          <button className="btn btn-dark" style={{ marginRight: '20px' }}>Configure Budgets</button>
+          {/* Changed button style to rounded */}
+          <button className="btn btn-dark rounded-pill" style={{ marginRight: '20px' }}>Customize Up Budgets</button>
         </Link>
 
         <Link to="/add-expense">
-          <button className="btn btn-secondary">Manage Expenses</button>
+          {/* Changed button style to rounded */}
+          <button className="btn btn-secondary rounded-pill">Manage Spending</button>
         </Link>
       </div>
 

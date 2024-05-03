@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import * as d3 from 'd3';
-import '../App.scss'; 
-import '../index.scss'; 
-
+import '../App.scss';
+import '../index.scss';
 
 const colors = [
     '#FFD1DC',
@@ -82,13 +81,18 @@ function BarChart() {
     }, []);
 
     return (
-        <svg ref={svgRef} width={60} height={40}></svg>
+        <div className="info-box">
+            <h2>Welcome to our personal budget website !</h2>
+            <p>Our platform is designed to help you manage your finances effectively and reach your financial goals with ease.</p>
+            <p>Whether you're looking to track your expenses, set budgets, or visualize your spending patterns, we've got you covered. With our intuitive interface, you can easily input your income and expenses, categorize transactions, and monitor your overall financial health in real-time.</p>
+            <p>Our budgeting tools provide insights into where your money is going, allowing you to make informed decisions about your spending habits.</p>
+            <svg ref={svgRef} width={500} height={300}></svg>
+        </div>
     );
 }
 
 function HomePage() {
     const [budgetData, setBudgetData] = useState([]);
-    const d3Container = useRef(null);
     const chartRef = useRef(null);
 
     useEffect(() => {
@@ -123,84 +127,11 @@ function HomePage() {
           });
       }, []);  
 
-
-      return (
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="card mt-3">
-                <div className="card-body">
-                  <h1 className="card-title">Stay on track</h1>
-                  <p className="card-text">
-                    Do you know where you are spending your money? If you really stop to track it down,
-                    you would get surprised! Proper budget management depends on real data... and this
-                    app will help you with that!
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div className="col-md-4">
-              <div className="card mt-3">
-                <div className="card-body">
-                  <h1 className="card-title">Alerts</h1>
-                  <p className="card-text">
-                    What if your clothing budget ended? You will get an alert. <mark className="mark">The goal is to never go over the budget</mark>
-                  </p>
-                </div>
-              </div>
-            </div>
-    
-            <div className="col-md-4">
-              <div className="card mt-3">
-                <div className="card-body">
-                  <h1 className="card-title">Results</h1>
-                  <p className="card-text">
-                    People who stick to a <mark className="mark">financial plan, budgeting every expense</mark>, get out of debt faster!
-                    Also, they live happier lives... since they expend without guilt or fear...
-                    because they know it is all good and accounted for.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-            <div className="col-md-4">
-              <div className="card mt-3">
-                <div className="card-body">
-                  <h1 className="card-title">Free</h1>
-                  <p className="card-text">
-                    This app is free!!! And you are the only one holding your data!
-                  </p>
-                </div>
-              </div>
-    
-            <div className="col-md-6">
-              <div className="card" style={{ width: '550px' }}>
-                <div className="card-body" style={{ height: '600px' }}>
-                  <h1 className="card-title">Chartjs</h1>
-                  <p className="card-text">
-                    <canvas id="Chart" width="50" height="50"></canvas>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div className="row mt-3">
-            <div ref={d3Container} className="col-md-12">
-              <div className="card" style={{ width: '600px' }}>
-                <div className="card-body" style={{ height: '400px' }}>
-                  <h1 className="card-title">D3js Chart</h1>
-                  <BarChart />
-                </div>
-              </div>
-            </div>
-          </div>
+    return (
+        <div>
+            <BarChart />
         </div>
-      );
-    }
-    
-    
-    export default HomePage;
+    );
+}
 
+export default HomePage;
