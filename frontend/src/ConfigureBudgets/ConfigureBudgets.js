@@ -38,7 +38,7 @@ function ConfigureBudgets() {
     if (category && budget && selectedMonth) {
       const token=localStorage.getItem("token");
       try {
-        const response = await axios.get(`http://localhost:3002/check-existing-budget/${userId}/${selectedMonth}/${category}`,{
+        const response = await axios.get(`http://54.83.95.43:3002/check-existing-budget/${userId}/${selectedMonth}/${category}`,{
           headers:{
             Authorization:`Bearer ${token}`
           }
@@ -79,7 +79,7 @@ function ConfigureBudgets() {
       console.log(token);
       console.log(months);
       await axios.post(
-        "http://localhost:3002/configure-budgets",
+        "http://54.83.95.43:3002/configure-budgets",
         {
           userId,
           months: selectedMonth,

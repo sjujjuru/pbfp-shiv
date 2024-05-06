@@ -46,7 +46,7 @@ function App() {
     clearInterval(intervalIdRef.current);
     const newIntervalId = setInterval(() => {
       const remainingTime = newExpirationTime - Date.now();
-      axios.post(`http://localhost:3002/refresh-token/${userId}`)
+      axios.post(`http://54.83.95.43:3002/refresh-token/${userId}`)
         .then((res) => {
           const newtoken = res.data.token;
           localStorage.setItem('token', newtoken);

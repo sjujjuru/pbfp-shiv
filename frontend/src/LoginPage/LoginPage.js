@@ -43,7 +43,7 @@ const LoginPage = (props) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:3002/', loginFormData)
+      .post('http://54.83.95.43:3002/', loginFormData)
       .then((response) => {
         setSuccessMessage(response.data.message);
         if (response.data.user) {
@@ -69,11 +69,11 @@ const LoginPage = (props) => {
         throw new Error('Passwords do not match');
       }
 
-      const response = await axios.post('http://localhost:3002/signup', signupFormData);
+      const response = await axios.post('http://54.83.95.43:3002/signup', signupFormData);
 
       setSuccessMessage(response.data.message);
 
-      const loginResponse = await axios.post('http://localhost:3002/', {
+      const loginResponse = await axios.post('http://54.83.95.43:3002/', {
         username: signupFormData.username,
         password: signupFormData.password,
       });

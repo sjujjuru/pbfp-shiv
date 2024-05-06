@@ -5,7 +5,7 @@ module.exports = {
         const reporter = new allureReporter.NightwatchAllureReporter({});
         reporter.write(results,done);
     },
-    launch_url: 'http://localhost:3000',
+    launch_url: 'http://54.83.95.43:3000',
     home_URL: '',
     userName: '',
     accessKey: '',

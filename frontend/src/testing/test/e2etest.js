@@ -3,7 +3,7 @@ module.exports = {
     "Login into App": function(browser){
         
         browser
-            .url("http://localhost:3000/")
+            .url("http://54.83.95.43:3000/")
             .pause(3000)
             .useXpath()
             .maximizeWindow()
